@@ -190,7 +190,7 @@
         img-alt="Image"
         img-top
         tag="article"
-        style="max-width: 20rem;"
+        style=""
         class="mb-4"
       >
         <b-card-text>
@@ -208,7 +208,7 @@
         img-alt="Image"
         img-top
         tag="article"
-        style="max-width: 20rem;"
+        style=""
         class="mb-4"
       >
         <b-card-text>
@@ -226,7 +226,7 @@
         img-alt="Image"
         img-top
         tag="article"
-        style="max-width: 20rem;"
+        style=""
         class="mb-4"
       >
         <b-card-text>
@@ -239,7 +239,7 @@
   </b-row>
 
   <b-row>
-    <b-col cols="12" md="6">
+    <b-col cols="12" md="6" class="mb-3">
       <h2>Kevin burgdoggen chislic turkey sirloin pork short loin</h2>
       <p class="lead">Bacon ipsum dolor amet picanha doner buffalo jowl turducken corned beef, fatback capicola tri-tip beef ribs pork sausage spare ribs tongue short ribs.</p>
       <p>T-bone boudin cow bacon. Chuck chislic picanha salami doner jowl rump shankle drumstick pancetta capicola short ribs cow prosciutto bacon.</p>
