@@ -114,10 +114,76 @@
   MAIN CONTENT
 -->
 <b-container>
+  
+  <b-row>
+    <!-- CAROUSEL -->
+    <b-col cols="12" md="8">
+      
+      <b-carousel
+      id="carousel-1"
+      v-model="slide"
+      :interval="4000"
+      controls
+      indicators
+      background="#ababab"
+      img-width="1024"
+      img-height="480"
+      style="text-shadow: 1px 1px 2px #333;"
+      @sliding-start="onSlideStart"
+      @sliding-end="onSlideEnd"
+      class="mb-3 mt-3"
+    >
+      <!-- Text slides with image -->
+      <b-carousel-slide
+        caption="First slide"
+        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
+        img-src="https://picsum.photos/1024/480/?image=52"
+      ></b-carousel-slide>
 
+      <!-- Slides with custom text -->
+      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
+        <h1>Hello world!</h1>
+      </b-carousel-slide>
+
+      <!-- Slides with image only -->
+      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58"></b-carousel-slide>
+
+      <!-- Slides with img slot -->
+      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
+      <b-carousel-slide>
+        <template v-slot:img>
+          <img
+            class="d-block img-fluid w-100"
+            width="1024"
+            height="480"
+            src="https://picsum.photos/1024/480/?image=55"
+            alt="image slot"
+          >
+        </template>
+      </b-carousel-slide>
+
+      <!-- Slide with blank fluid image to maintain slide aspect ratio -->
+      <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
+          a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
+        </p>
+      </b-carousel-slide>
+    </b-carousel>
+    </b-col>
+
+    <b-col cols="12" md="4" class="mt-3">
+      <p class="lead">Carousel Data Display</p>
+      <p class="mt-4">
+        <strong>Slide #: {{ slide }}</strong><br>
+        <strong>Sliding: {{ sliding }}</strong>
+    </p>
+    </b-col>
+
+  </b-row>
   <b-row>
     
-    <b-col cols="12" md="4">
+    <b-col cols="12" md="4" class="mt-3">
       <b-card
         title="Card Title"
         img-src="https://picsum.photos/600/300/?image=25"
@@ -135,7 +201,7 @@
       </b-card>
     </b-col>
 
-    <b-col cols="12" md="4">
+    <b-col cols="12" md="4" class="mt-3">
       <b-card
         title="Card Title"
         img-src="https://picsum.photos/600/300/?image=25"
@@ -153,7 +219,7 @@
       </b-card>
     </b-col>
 
-    <b-col cols="12" md="4">
+    <b-col cols="12" md="4" class="mt-3">
       <b-card
         title="Card Title"
         img-src="https://picsum.photos/600/300/?image=25"
@@ -331,6 +397,7 @@ export default {
   data () {
     return {
       msg: 'Using Bootstrap-vue with Vue.js',
+      // FORM
       form: {
           email: '',
           name: '',
@@ -338,10 +405,15 @@ export default {
           checked: []
         },
         foods: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
-        show: true
+        show: true,
+        // Carousel
+        slide: 0,
+        sliding: null
       }
     },
     methods: {
+      
+      // FORM
       onSubmit(evt) {
         evt.preventDefault()
         alert(JSON.stringify(this.form))
@@ -358,7 +430,15 @@ export default {
         this.$nextTick(() => {
           this.show = true
         })
+      },
+
+      // CAROUSEL
+      onSlideStart(slide) {
+        this.sliding = true
+      },
+      onSlideEnd(slide) {
+        this.sliding = false
+      }
     }
   }
-}
 </script>
