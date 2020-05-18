@@ -61,7 +61,7 @@
       BOOTSTRAP VUE STRAPLINE
   -->
   <b-row class="bg-dark pt-4 pb-4">
-    <b-col cols="3">
+    <b-col cols="12" md="3" class="mb-3 d-flex align-items-center justify-content-center">
 
       <b-nav pills>
       <!-- horizontal does not work -->
@@ -88,12 +88,12 @@
 
     </b-col>
 
-    <b-col cols="8" class="d-flex align-items-center justify-content-center">
+    <b-col cols="12" md="8" class="d-flex align-items-center justify-content-center mb-3">
       <h1 class="text-center text-light">{{ msg }}</h1>
     </b-col>
     
     <!-- Sliding in/out panel -->  
-    <b-col cols="1" class="d-flex align-items-center">
+    <b-col cols="12" md="1" class="d-flex align-items-center justify-content-center">
       <div>
         <b-button size="sm" v-b-toggle.sidebar-1>MORE</b-button>
         <b-sidebar id="sidebar-1" title="Neat Feature!" shadow>
