@@ -1,6 +1,6 @@
-# getting-started
+#  Vue.js app using Bootstrap Vue
 
-> A Vue.js project
+How to use  `Bootstrap Vue`  with  `Vue.js`  to style your next `Single Page Application (SAP)`.
 
 ## Build Setup
 
