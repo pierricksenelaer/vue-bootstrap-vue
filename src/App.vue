@@ -177,7 +177,15 @@
       <p class="mt-4">
         <strong>Slide #: {{ slide }}</strong><br>
         <strong>Sliding: {{ sliding }}</strong>
-    </p>
+      </p>
+      <hr class="my-4">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis.
+      </p>
+      <b-button v-b-modal.modal-1 variant="warning">More</b-button>
+        <b-modal id="modal-1" title="BootstrapVue">
+          <p class="my-4">Hello from modal!</p>
+      </b-modal>
+
     </b-col>
 
   </b-row>
@@ -243,11 +251,6 @@
       <h2>Kevin burgdoggen chislic turkey sirloin pork short loin</h2>
       <p class="lead">Bacon ipsum dolor amet picanha doner buffalo jowl turducken corned beef, fatback capicola tri-tip beef ribs pork sausage spare ribs tongue short ribs.</p>
       <p>T-bone boudin cow bacon. Chuck chislic picanha salami doner jowl rump shankle drumstick pancetta capicola short ribs cow prosciutto bacon.</p>
-
-      <b-button v-b-modal.modal-1 variant="warning">Modal</b-button>
-        <b-modal id="modal-1" title="BootstrapVue">
-          <p class="my-4">Hello from modal!</p>
-      </b-modal>
     </b-col>
 
     <b-col cols="12" md="6">
