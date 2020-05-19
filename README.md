@@ -1,4 +1,5 @@
 
+
 #  Vue.js app using Bootstrap Vue
 
 How to use  `Bootstrap Vue`  with  `Vue.js`  to style your next `Single Page Application (SAP)`.
@@ -22,5 +23,9 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
  
  - Fully working [Vue.js](https://vuejs.org/) using [Bootstrap Vue](https://bootstrap-vue.org/) for its styling
  - The `src` as well as the `dist` (public) files are included
- 
+
+![This is how your SAP should look like](http://www.pierrick-senelaer.com/dev/PWAs/getting_started.png)
+
+[Reference](https://www.sitepoint.com/bootstrap-vue-js-bootstrap-vue/) 
+
 Happy Coding!
